@@ -1,9 +1,9 @@
 # HNG Internship - Stage 0: Profile Card
+   
+My submission for HNG Internship Stage 0. A responsive profile card built with vanilla HTML, CSS, and JavaScript.
 
-A beautiful, accessible, and fully-responsive profile card built with semantic HTML, modern CSS, and vanilla JavaScript.
-
-**Live Demo**: [Your Live URL Here]  
-**GitHub Repository**: [Your GitHub Repo URL]
+**Live Demo**: [https://hng-stage-0-profile-card-black.vercel.app/]  
+**GitHub Repository**: [https://github.com/Pearl-Ekeodu/hng-stage-0-profile-card]
 
 ---
 
@@ -123,18 +123,7 @@ A beautiful, accessible, and fully-responsive profile card built with semantic H
 
 2. **Open the Project**
    
-   **Option A: Direct Open**
-   - Simply double-click `index.html` to open in your default browser
-   
-   **Option B: Local Server (Recommended)**
-   ```bash
-   # Using Python 3
-   python -m http.server 8000
-   
-   # Using Node.js http-server
-   npx http-server
-   ```
-   Then navigate to `http://localhost:8000` in your browser
+Simply double-click `index.html` to open in your default browser
 
 3. **That's it!** The profile card should display immediately with live time updates.
 
@@ -150,53 +139,6 @@ project-root/
 
 **Note**: All CSS and JavaScript are embedded in `index.html` for simplicity.
 
----
-
-## 🚀 Deployment
-
-### Quick Deploy Options
-
-#### Option 1: Netlify (Easiest)
-
-**Drag & Drop Method:**
-1. Go to [https://app.netlify.com/drop](https://app.netlify.com/drop)
-2. Drag your project folder onto the page
-3. Get instant live URL!
-
-**GitHub Method:**
-1. Push code to GitHub
-2. Go to [Netlify](https://app.netlify.com)
-3. Click "Add new site" → "Import an existing project"
-4. Connect GitHub and select your repository
-5. Deploy!
-
-#### Option 2: GitHub Pages
-
-1. Push your code to GitHub
-2. Go to repository Settings → Pages
-3. Select "main" branch as source
-4. Save and wait 2-3 minutes
-5. Your site will be live at: `https://username.github.io/repo-name/`
-
-#### Option 3: Vercel
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel`
-3. Follow prompts
-4. Get instant deployment!
-
----
-
-## 🧪 Testing
-
-### Manual Testing
-
-1. Open `index.html` in your browser
-2. Verify all elements are visible
-3. Check that time updates every second
-4. Test responsive layout (resize browser window)
-5. Test keyboard navigation (Tab through links)
-6. Verify hover effects work
 
 ### Automated Testing (Browser Console)
 
@@ -233,82 +175,7 @@ const difference = Math.abs(currentTime - displayedTime);
 console.log('Time Test:', difference < 2000 ? '✅ PASS' : '❌ FAIL');
 ```
 
----
 
-## 🎨 Customization
-
-### Update Personal Information
-
-Edit `index.html` to personalize your card:
-
-1. **Your Name** (around line 716):
-   ```html
-   <h1 data-testid="test-user-name">Your Name</h1>
-   ```
-
-2. **Your Bio** (around line 717):
-   ```html
-   <p data-testid="test-user-bio">
-       Your bio text here...
-   </p>
-   ```
-
-3. **Your Avatar** (around line 705):
-   ```html
-   <img 
-       data-testid="test-user-avatar" 
-       src="YOUR_IMAGE_URL" 
-       alt="Profile picture of Your Name"
-   >
-   ```
-   **Tip**: Use [Unsplash](https://unsplash.com) or [UI Avatars](https://ui-avatars.com/) for profile images.
-
-4. **Social Links** (around lines 732-758):
-   ```html
-   <a href="https://twitter.com/yourusername" ...>
-   <a href="https://github.com/yourusername" ...>
-   <a href="https://linkedin.com/in/yourprofile" ...>
-   ```
-
-5. **Hobbies & Dislikes** (around lines 768-786):
-   - Update list items with your personal hobbies and dislikes
-
----
-
-## 🌐 Browser Support
-
-- ✅ Chrome/Edge 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
-
----
-
-## 📋 Acceptance Criteria
-
-- ✅ All required elements exist and are discoverable by data-testids
-- ✅ HTML uses semantic tags (article, figure, nav, section, header, time)
-- ✅ Time value displays `Date.now()` in milliseconds
-- ✅ Avatar renders with descriptive alt attribute
-- ✅ Social links have `target="_blank"` and `rel="noopener noreferrer"`
-- ✅ Hobbies and dislikes are distinct lists
-- ✅ Keyboard navigation works with visible focus styles
-- ✅ Responsive layout at mobile/tablet/desktop breakpoints
-- ✅ All interactive elements are keyboard-accessible
-
----
-
-## 📤 Submission
-
-**Submission Form**: [https://forms.gle/p7PcQ8nqVeH7rVcs9](https://forms.gle/p7PcQ8nqVeH7rVcs9)  
-**Deadline**: October 19th, 2025
-
-### What to Submit:
-1. Live URL (Netlify, GitHub Pages, or Vercel)
-2. GitHub repository link
-3. Ensure README is clear and complete
-
----
 
 ## 👤 Author
 
@@ -333,12 +200,6 @@ Building accessible and beautiful web experiences
 Built for **HNG Internship Stage 0**  
 Learn more about HNG: [https://hng.tech](https://hng.tech)
 
----
-
-**License**: MIT  
-**Version**: 1.0.0
-
----
 
 Built with ❤️ for HNG Internship Stage 0
 
