@@ -13,11 +13,8 @@ My submission for HNG Internship Stage 0. A responsive profile card built with v
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Deployment](#deployment)
-- [Testing](#testing)
 - [Project Structure](#project-structure)
-- [Customization](#customization)
-- [Browser Support](#browser-support)
+
 
 ---
 
