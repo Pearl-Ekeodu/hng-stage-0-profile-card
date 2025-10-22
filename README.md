@@ -1,6 +1,6 @@
-# HNG Internship - Stage 0: Profile Card
+# HNG Internship - Stage 0 & 1: Profile Card & Multi-Page Application
    
-My submission for HNG Internship Stage 0. A responsive profile card built with vanilla HTML, CSS, and JavaScript.
+My submission for HNG Internship Stage 0 & 1. A responsive profile card (Stage 0) extended into a multi-page application (Stage 1) with contact form and about page, built with vanilla HTML, CSS, and JavaScript.
 
 **Live Demo**: [https://hng-stage-0-profile-card-black.vercel.app/]  
 **GitHub Repository**: [https://github.com/Pearl-Ekeodu/hng-stage-0-profile-card]
@@ -20,7 +20,7 @@ My submission for HNG Internship Stage 0. A responsive profile card built with v
 
 ## 🎯 Task Requirements Met
 
-### ✅ All Required Elements with Correct data-testid Attributes
+### ✅ Stage 0 - Profile Card Elements with Correct data-testid Attributes
 
 - **Profile card root container** - `data-testid="test-profile-card"`
 - **Name** - `data-testid="test-user-name"`
@@ -33,6 +33,28 @@ My submission for HNG Internship Stage 0. A responsive profile card built with v
   - LinkedIn - `data-testid="test-user-social-linkedin"`
 - **Hobbies list** - `data-testid="test-user-hobbies"`
 - **Dislikes list** - `data-testid="test-user-dislikes"`
+
+### ✅ Stage 1 - Contact Us Page Elements
+
+- **Contact page container** - `data-testid="test-contact-page"`
+- **Form fields**:
+  - Full Name - `data-testid="test-contact-name"`
+  - Email - `data-testid="test-contact-email"`
+  - Subject - `data-testid="test-contact-subject"`
+  - Message - `data-testid="test-contact-message"`
+- **Submit button** - `data-testid="test-contact-submit"`
+- **Error messages** - `data-testid="test-contact-error-<field>"`
+- **Success message** - `data-testid="test-contact-success"`
+
+### ✅ Stage 1 - About Me Page Elements
+
+- **About page container** - `data-testid="test-about-page"`
+- **Content sections**:
+  - Bio - `data-testid="test-about-bio"`
+  - Goals - `data-testid="test-about-goals"`
+  - Confidence areas - `data-testid="test-about-confidence"`
+  - Future note - `data-testid="test-about-future-note"`
+  - Extra thoughts - `data-testid="test-about-extra"`
 
 ### ✅ Semantic HTML Structure
 
@@ -67,6 +89,8 @@ My submission for HNG Internship Stage 0. A responsive profile card built with v
 - **Live Updates**: Time updates every second automatically
 - **Social Links**: All links open in new tab with `target="_blank"` and `rel="noopener noreferrer"`
 - **Smooth Animations**: Card fade-in, hover effects on avatar and links
+- **Form Validation**: Contact form with email format and message length validation
+- **Page Navigation**: Seamless navigation between Profile, About Me, and Contact pages
 
 ---
 
@@ -130,11 +154,15 @@ Simply double-click `index.html` to open in your default browser
 
 ```
 project-root/
-├── index.html          # Main HTML file with embedded CSS and JavaScript
+├── index.html          # Main profile page with embedded CSS and JavaScript
+├── about.html          # About Me page with reflective content
+├── contact.html        # Contact Us page with form validation
+├── src/                # Assets folder
+│   └── WhatsApp Image 2024-06-12 at 00.22.52.jpeg  # Profile image
 └── README.md           # Documentation (this file)
 ```
 
-**Note**: All CSS and JavaScript are embedded in `index.html` for simplicity.
+**Note**: All CSS and JavaScript are embedded in each HTML file for simplicity.
 
 
 ### Automated Testing (Browser Console)
@@ -185,18 +213,40 @@ Building accessible and beautiful web experiences
 ## 📝 Additional Notes
 
 - Built with vanilla HTML/CSS/JavaScript - no frameworks or build tools required
-- Single-file architecture for easy deployment
+- Multi-page architecture for easy navigation
 - Time updates automatically every second using JavaScript
 - All design decisions prioritize accessibility and user experience
 - Fully responsive across all device sizes
+- Form validation with real-time feedback
+- Consistent design language across all pages
+
+---
+
+## 🆕 Stage 1 New Features
+
+### Contact Us Page
+- **Form Validation**: Email format validation and message length requirements
+- **Accessibility**: Proper labels, ARIA attributes, and keyboard navigation
+- **Success/Error Handling**: Real-time feedback for form submissions
+- **Responsive Design**: Optimized for all device sizes
+
+### About Me Page
+- **Reflective Content**: Personal journey, goals, and aspirations
+- **Semantic Structure**: Proper HTML5 semantic elements
+- **Consistent Styling**: Matches the main profile design
+- **Accessible Navigation**: Easy movement between pages
+
+### Navigation System
+- **Seamless Navigation**: Links between all three pages
+- **Consistent Design**: Unified color scheme and typography
+- **Mobile-Friendly**: Touch-friendly navigation on all devices
 
 ---
 
 ## 🙏 Acknowledgments
 
-Built for **HNG Internship Stage 0**  
+Built for **HNG Internship Stage 0 & 1**  
 Learn more about HNG: [https://hng.tech](https://hng.tech)
 
-
-Built with ❤️ for HNG Internship Stage 0
+Built with ❤️ for HNG Internship Stage 0 & 1
 

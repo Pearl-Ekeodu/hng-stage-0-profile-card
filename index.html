@@ -101,6 +101,22 @@
             min-height: 0;
         }
 
+        .avatar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar-section nav {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .avatar-section nav ul {
+            justify-content: center;
+        }
+
         /* Avatar Section */
         figure {
             text-align: center;
@@ -139,8 +155,7 @@
             border: 6px solid transparent;
             background: linear-gradient(white, white) padding-box,
                         linear-gradient(135deg, #667eea, #764ba2, #f093fb) border-box;
-            box-shadow: 
-                0 4px 6px rgba(102, 126, 234, 0.15);
+            box-shadow: none;
             transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
             position: relative;
             z-index: 1;
@@ -154,8 +169,7 @@
 
         figure img[data-testid="test-user-avatar"]:hover {
             transform: scale(1.08) rotate(5deg);
-            box-shadow: 
-                0 8px 20px rgba(102, 126, 234, 0.25);
+            box-shadow: none;
             animation-play-state: paused;
         }
 
@@ -163,7 +177,7 @@
             margin-top: 20px;
             font-size: 1.2rem;
             font-weight: 600;
-            color: #667eea;
+            color: #1a202c;
             font-style: normal;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -345,8 +359,7 @@
         }
 
         nav ul li a:focus {
-            outline: 2px solid #667eea;
-            outline-offset: 3px;
+            outline: none;
         }
 
         nav ul li a:active {
@@ -700,13 +713,28 @@
     <article data-testid="test-profile-card">
         <div class="card-content">
             <!-- Avatar Section -->
-            <figure>
-                <img 
-                    data-testid="test-user-avatar" 
-                    src="./src/WhatsApp Image 2024-06-12 at 00.22.52.jpeg"                    alt="Profile picture of Pearl Ekeodu"
-                >
-                <figcaption>Frontend Developer</figcaption>
-            </figure>
+            <div class="avatar-section">
+                <figure>
+                    <img 
+                        data-testid="test-user-avatar" 
+                        src="./src/WhatsApp Image 2024-06-12 at 00.22.52.jpeg"                    alt="Profile picture of Pearl Ekeodu"
+                    >
+                    <figcaption>Frontend Developer</figcaption>
+                </figure>
+
+                <!-- Page Navigation -->
+                <nav aria-label="Page navigation">
+                    <h2>Explore More</h2>
+                    <ul>
+                        <li>
+                            <a href="about.html">About Me</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Me</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
             <!-- Main Content -->
             <div style="min-width: 0; overflow-wrap: break-word;">
@@ -722,7 +750,7 @@
                     </div>
                 </header>
 
-                <!-- Social Links -->
+                <!-- Navigation Links -->
                 <nav data-testid="test-user-social-links" aria-label="Social media links">
                     <h2>Connect With Me</h2>
                     <ul>
@@ -758,6 +786,7 @@
                         </li>
                     </ul>
                 </nav>
+
 
                 <!-- Hobbies and Dislikes -->
                 <div class="lists-container">

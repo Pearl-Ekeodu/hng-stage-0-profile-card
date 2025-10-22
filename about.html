@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - HNG Internship</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(72, 219, 251, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        main[data-testid="test-about-page"] {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            box-shadow: 
+                0 30px 90px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+                0 0 100px rgba(120, 119, 198, 0.1);
+            max-width: 800px;
+            width: 100%;
+            padding: 50px;
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        main[data-testid="test-about-page"]::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, 
+                #667eea 0%, 
+                #764ba2 25%, 
+                #f093fb 50%, 
+                #4facfe 75%, 
+                #00f2fe 100%);
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: 2.5rem;
+            color: #1a202c;
+            margin-bottom: 30px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            animation: fadeInScale 0.6s ease-out backwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+        }
+
+        section:hover::before {
+            opacity: 1;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            color: #1a202c;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        p {
+            color: #1a202c;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-links a {
+            color: #1a202c;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1a202c;
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 767px) {
+            body {
+                padding: 10px;
+            }
+
+            main[data-testid="test-about-page"] {
+                padding: 30px 20px;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-bottom: 12px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+        }
+
+        /* Accessibility */
+        *:focus-visible {
+            outline: 2px solid #667eea;
+            outline-offset: 3px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main data-testid="test-about-page">
+        <div class="nav-links">
+            <a href="index.html">← Back to Profile</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+
+        <h1>About Me</h1>
+
+        <section data-testid="test-about-bio">
+            <h2>My Journey</h2>
+            <p>
+                I'm Pearl Ekeodu, a passionate frontend developer who believes in the power of clean, accessible code. 
+                My journey into tech started with a curiosity about how websites work, and it has evolved into a 
+                deep love for creating digital experiences that make a difference. I'm constantly learning and 
+                growing, always excited to tackle new challenges and build something meaningful.
+            </p>
+        </section>
+
+        <section data-testid="test-about-goals">
+            <h2>Goals in This Program</h2>
+            <p>
+                My primary goal is to become a world-class frontend developer. I want to master advanced React 
+                concepts, learn state management with Redux, and become proficient in modern build tools and 
+                deployment strategies. I'm also excited to collaborate with other developers, contribute to 
+                open-source projects, and build a strong professional network. Ultimately, I want to create 
+                applications that solve real-world problems and improve people's lives.
+            </p>
+        </section>
+
+        <section data-testid="test-about-confidence">
+            <h2>Areas of Low Confidence</h2>
+            <p>
+                I sometimes struggle with complex state management patterns and advanced performance optimization 
+                techniques. Backend development is also an area where I feel less confident, particularly with 
+                database design and API architecture. I'm working on improving my understanding of testing 
+                strategies and debugging complex issues. However, I see these as growth opportunities rather 
+                than limitations, and I'm committed to improving in these areas.
+            </p>
+        </section>
+
+        <section data-testid="test-about-future-note">
+            <h2>Note to Future Self</h2>
+            <p>
+                Remember why you started this journey - because you love creating things that matter. 
+                Don't let imposter syndrome hold you back. You've come so far, and you have so much more 
+                to achieve. Keep building, keep learning, and never stop being curious. The challenges 
+                you face today are preparing you for the success you'll have tomorrow. Trust the process, 
+                stay consistent, and remember that every expert was once a beginner.
+            </p>
+        </section>
+
+        <section data-testid="test-about-extra">
+            <h2>Extra Thoughts</h2>
+            <p>
+                I'm incredibly grateful for this opportunity to grow and learn. The tech community has been 
+                so welcoming, and I'm excited to contribute back. I believe that technology should be 
+                accessible to everyone, and I'm committed to building inclusive digital experiences. 
+                When I'm not coding, I enjoy reading, playing video games, and teaching others what I've learned. 
+                I'm looking forward to the amazing projects and connections this program will bring!
+            </p>
+        </section>
+    </main>
+</body>
+</html>
