@@ -248,5 +248,5 @@ Building accessible and beautiful web experiences
 Built for **HNG Internship Stage 0 & 1**  
 Learn more about HNG: [https://hng.tech](https://hng.tech)
 
-Built with ❤️ for HNG Internship Stage 0 & 1
+Built with ❤️ for HNG Internship
 
