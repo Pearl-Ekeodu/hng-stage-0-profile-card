@@ -125,20 +125,7 @@
         }
 
         figure::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe);
-            background-size: 300% 300%;
-            animation: gradientRotate 4s ease infinite;
-            opacity: 0.3;
-            filter: blur(20px);
-            z-index: 0;
+            display: none;
         }
 
         @keyframes gradientRotate {
